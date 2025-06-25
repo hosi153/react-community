@@ -1,6 +1,14 @@
-import { products } from "../data/products";
+import { useState, useEffect } from "react";
 
 function ProductListPage() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-6 py-12">

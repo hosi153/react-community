@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage.jsx";
 import PostListPage from "./pages/PostListPage.jsx";
 import ProductListPage from "./pages/ProductListPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
+import WritePage from "./pages/WritePage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +22,15 @@ const router = createBrowserRouter([
         element: <PostListPage />,
       },
       {
+        path: "write",
+        element: <WritePage />,
+      },
+      {
         path: "products",
         element: <ProductListPage />,
       },
       {
-        path: "*", // 일치하는 경로가 없을 때
+        path: "*",
         element: <ErrorPage />,
       },
     ],
