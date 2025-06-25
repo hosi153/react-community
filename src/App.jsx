@@ -1,10 +1,13 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
+import Layout from "./layouts/Layout";
+import PostListPage from "./pages/PostListPage";
 
 function App() {
   return (
-    <>
-      <div className="bg-red-500">햐</div>
-    </>
+    <Layout>
+      <Outlet />
+    </Layout>
   );
 }
 
